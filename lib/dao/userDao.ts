@@ -18,14 +18,14 @@ export const addUser = async (doc: any) => {
 export const findUserById = async (id) => {
   return await userRepo.findUserById(id);
 };
-export const findUserByName = async (username:string) => {
+export const findUserByName = async (username: string) => {
   return await userRepo.findUserByName(username);
 };
 export const getAllUser = async (id: string) => {
   return userRepo.getAllUser(id);
 };
 export const updateUserStatus = async (doc: any) => {
-  console.log("==================")
+  console.log("=======================Request===============================")
   console.log(doc);
   const userModel = new User(
     {
@@ -39,6 +39,6 @@ export const updateUserStatus = async (doc: any) => {
   } catch (error) {
     return error;
   }
-  
-  
+
+
 };
